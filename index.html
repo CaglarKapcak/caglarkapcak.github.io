@@ -3,31 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolyo | [Adınız]</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ahmet Yılmaz - Mekatronik Mühendisi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>[Adınız]</h1>
-        <p>Yazılım Geliştirici | Tasarımcı</p>
-    </header>
-    
-    <section id="about">
-        <h2>Hakkımda</h2>
-        <p>Merhaba! Ben [Adınız]. [Kısa bir tanıtım].</p>
-    </section>
-    
-    <section id="projects">
-        <h2>Projelerim</h2>
-        <div class="project-list">
-            <!-- Projeler buraya gelecek -->
+    <!-- Particles.js Arka Plan -->
+    <div id="particles-js"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="robot-arm-animation">
+            <svg id="robot-arm" viewBox="0 0 200 150">
+                <!-- Robot Kol Çizimi -->
+                <path class="arm-base" d="M50,100 L50,80 L60,80 L60,100 Z" fill="#2C3E50"/>
+                <path class="arm-segment1" d="M60,90 L90,90 L90,95 L60,95 Z" fill="#E74C3C"/>
+                <path class="arm-segment2" d="M90,90 L120,70 L120,75 L90,95 Z" fill="#3498DB"/>
+                <circle class="joint1" cx="60" cy="90" r="5" fill="#ECF0F1"/>
+                <circle class="joint2" cx="90" cy="90" r="5" fill="#ECF0F1"/>
+                <path class="gripper" d="M120,70 L130,65 L130,80 L120,75 Z" fill="#2ECC71"/>
+            </svg>
+        </div>
+        <h1>Merhaba, Ben <span>Ahmet Yılmaz</span></h1>
+        <p class="subtitle">Mekatronik Mühendisi | Robotik & Otomasyon</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">Projelerim</a>
+            <a href="#contact" class="btn-outline">İletişim</a>
         </div>
     </section>
-    
-    <footer>
-        <p>© 2024 [Adınız] | GitHub: <a href="https://github.com/kullaniciadiniz">@kullaniciadiniz</a></p>
-    </footer>
-    
-    <script src="script.js"></script>
+
+    <!-- Scriptler -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
