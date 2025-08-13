@@ -579,3 +579,71 @@ footer {
         flex: 0 0 400px; /* Daha geniş ekranlarda kartlar daha büyük */
     }
 }
+/* Notlar Bölümü Stilleri */
+.notes-scroller {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+}
+
+.note-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+}
+
+.note-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.note-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.note-card p {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.note-links {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.note-links .btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* GitHub butonu için özel stil */
+.note-links .btn:first-child {
+    background: #333;
+}
+
+/* Medium butonu için özel stil */
+.note-links .btn:last-child {
+    background: #00ab6c;
+}
