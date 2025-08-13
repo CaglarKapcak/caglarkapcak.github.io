@@ -531,3 +531,51 @@ footer {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+/* Projects Section Updates */
+.projects-container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.projects-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+    padding: 20px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.projects-scroller::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.projects-grid {
+    display: contents; /* Grid yerine flex kullanacağız */
+}
+
+.project-card {
+    flex: 0 0 350px;
+    scroll-snap-align: start;
+    /* Diğer mevcut .project-card stilleri korunuyor */
+}
+
+.scroll-hint {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--gray-color);
+    font-style: italic;
+    display: none; /* Mobilde göstermiyoruz */
+}
+
+@media (min-width: 768px) {
+    .scroll-hint {
+        display: block;
+    }
+    
+    .project-card {
+        flex: 0 0 400px; /* Daha geniş ekranlarda kartlar daha büyük */
+    }
+}
