@@ -137,45 +137,50 @@ nav {
 .about-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 50px;
-  align-items: center;
+  gap: 60px; /* Yazıyla arasındaki boşluğu artırdık */
+  align-items: start;
 }
 
 .about-image {
   position: relative;
-  z-index: 1;
+  margin-left: -30px; /* Sola doğru kaydırma */
+  margin-top: 30px;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 400px; /* Büyük boyut */
+  max-width: 380px; /* Boyutu büyüttük */
   height: auto;
-  border-radius: 20px;
-  border: 8px solid var(--accent-color);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  transform: perspective(1000px) rotateY(-10deg); /* 3D efekti */
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 15px;
+  border: 5px solid var(--accent-color);
+  box-shadow: 15px 15px 0 rgba(0,0,0,0.1); /* Sağ alt gölge */
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
   object-fit: cover;
-  aspect-ratio: 1/1; /* Kare format */
+  aspect-ratio: 4/5; /* Dikey dikdörtgen format */
 }
 
 .about-image img:hover {
-  transform: perspective(1000px) rotateY(0deg) scale(1.05);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  transform: rotate(0deg);
 }
 
-/* Arka plan efekti */
-.about-image::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
-  top: 15px;
-  left: 15px;
-  z-index: -1;
-  border-radius: 25px;
-  opacity: 0.7;
+/* Yazı alanını rahatlatma */
+.about-text {
+  padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about-image {
+    margin: 0 auto 30px;
+    max-width: 300px;
+  }
+  .about-text {
+    padding-right: 0;
+  }
 }
 
 
