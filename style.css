@@ -1,0 +1,95 @@
+/* Temel stiller */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+}
+
+nav ul li a:hover {
+    background: #34495e;
+    border-radius: 4px;
+}
+
+/* Hero bölümü */
+#hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #f8f9fa;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+/* Projeler grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* Yetenekler */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.skill-category {
+    background: #ecf0f1;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    min-width: 200px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2c3e50;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skills-container {
+        flex-direction: column;
+    }
+}
