@@ -6,14 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Language data
     const languages = {
         tr: {
-            name: "Ad Soyad",
+            name: "Çağlar Kapcak",
             nav_about: "Hakkımda",
             nav_projects: "Projeler",
             nav_blog: "Blog",
             nav_contact: "İletişim",
             about_title: "Mekatronik Mühendisi",
-            about_p1: "Merhaba, ben [Ad Soyad]. Mekatronik mühendisliği alanında X yıllık deneyime sahibim. Mekanik tasarım, otomasyon sistemleri ve robotik konularında uzmanlaştım.",
-            about_p2: "Hedefim, disiplinlerarası bilgimi kullanarak yenilikçi çözümler üretmek ve endüstriyel otomasyon alanında projeler geliştirmektir.",
+            about_p1: "Merhaba, ben Çağlar Kapcak. Mekatronik mühendisliği alanında 1 yıllık deneyime sahibim. SolidWorks, Siemens NX ve Ansys ile tasarım ve analiz çalışmaları yapıyorum.",
+            about_p2:"MATLAB ve Python kullanarak farklı projeler geliştirdim. Teknolojiye meraklı, öğrenmeye açık ve üretken bir mühendis olarak hem teknik hem de yaratıcı çözümler üretmeyi seviyorum",
+            about_p3: "Hedefim, disiplinlerarası bilgimi kullanarak yenilikçi çözümler üretmek ve endüstriyel otomasyon alanında projeler geliştirmektir.",
             skills_title: "Yetenekler",
             skills_mechanical: "Mekanik",
             skills_electronics: "Elektronik",
@@ -33,14 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
             footer_rights: "Tüm hakları saklıdır"
         },
         en: {
-            name: "Full Name",
+            name: "Çağlar Kapcak",
             nav_about: "About",
             nav_projects: "Projects",
             nav_blog: "Blog",
             nav_contact: "Contact",
             about_title: "Mechatronics Engineer",
-            about_p1: "Hello, I'm [Full Name]. I have X years of experience in mechatronics engineering. I specialize in mechanical design, automation systems and robotics.",
-            about_p2: "My goal is to use my interdisciplinary knowledge to produce innovative solutions and develop projects in the field of industrial automation.",
+            about_p1: "Hello, I'm Çağlar Kapcak. I have 1 years of experience in mechatronics engineering. I perform design and analysis work using SolidWorks, Siemens NX, and Ansys.",
+            about_p2:"I have developed various projects using MATLAB and Python. As an engineer who is curious about technology, open to learning, and productive, I enjoy producing both technical and creative solutions.",
+            about_p3: "My goal is to use my interdisciplinary knowledge to produce innovative solutions and develop projects in the field of industrial automation.",
             skills_title: "Skills",
             skills_mechanical: "Mechanical",
             skills_electronics: "Electronics",
