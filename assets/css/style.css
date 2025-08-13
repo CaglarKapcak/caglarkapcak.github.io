@@ -141,6 +141,12 @@ nav {
     align-items: center;
 }
 
+/* Fotoğraf konteyneri */
+.about-image {
+  position: relative;
+  margin-top: 30px; /* Yukarıdan boşluk */
+}
+
 /* Fotoğraf stilleri */
 .about-image img {
   width: 100%;
