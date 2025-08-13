@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             skills_title: "Skills",
             skills_mechanical: "Mechanical",
             skills_electronics: "Electronics",
-            skills_plc:"PLC programming",
+            skills_plc:"PLC Programming",
             skills_software: "Software",
             projects_title: "Projects",
             project1_desc: "I designed a PLC-based, infrared sensor-supported dual robot arm packaging system and simulated it in Factory I/O.",
