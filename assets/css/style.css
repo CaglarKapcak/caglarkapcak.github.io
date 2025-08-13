@@ -141,17 +141,21 @@ nav {
     align-items: center;
 }
 
+/* Fotoğraf stilleri */
 .about-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; /* Yuvarlak yapar */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
-    border: 5px solid var(--accent-color); /* Turuncu çerçeve */
-    padding: 3px; /* Çerçeve ile resim arası boşluk */
+  width: 100%;
+  max-width: 300px; /* Maksimum genişlik */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 5px solid var(--accent-color); /* Turuncu çerçeve */
+  transform: rotate(-3deg); /* Hafif döndürme efekti */
+  transition: all 0.3s ease;
 }
+
+.about-image img:hover {
+  transform: rotate(0deg) scale(1.03); /* Hover efekti */
+}
+
 
 .about-text h1 {
     font-size: 2rem;
