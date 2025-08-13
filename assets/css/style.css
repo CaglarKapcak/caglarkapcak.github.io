@@ -469,57 +469,7 @@ nav {
     background: #1a252f;
 }
 
-/* iletişim bölümü 
-/* İletişim Bölümü Stilleri */
-.link-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    gap: 10px;
-}
 
-.link-item a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--dark-color);
-    flex-grow: 1;
-}
-
-.link-item i {
-    margin-right: 8px;
-    color: var(--accent-color);
-    width: 20px;
-    text-align: center;
-}
-
-.copy-btn {
-    background: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 5px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.copy-btn:hover {
-    background: #d35400;
-    transform: translateY(-2px);
-}
-
-.copy-btn.copied {
-    background: #27ae60;
-    animation: pulse 0.5s;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
 /* Footer Styles */
 footer {
     background: var(--primary-color);
