@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çağlar Kapcak Portfolyo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span data-lang="name">Çağlar Kapcak</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" data-lang="nav_about">Hakkımda</a></li>
+                <li><a href="#projects" data-lang="nav_projects">Projeler</a></li>
+                <li><a href="#blog" data-lang="nav_blog">Blog</a></li>
+                <li><a href="#contact" data-lang="nav_contact">İletişim</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button id="language-toggle">EN</button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hakkımda Bölümü -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/images/profile.jpg" alt="Profil Fotoğrafı">
+                    </div>
+                    <div class="about-text">
+                        <h1 data-lang="about_title">Mekatronik Mühendisi</h1>
+                        <p data-lang="about_p1">Erciyes Üniversitesi Mekatronik Mühendisliği mezunuyum. SolidWorks, Siemens NX ve Ansys ile tasarım ve analiz çalışmaları yapıyorum. </p>
+                        <p data-lang="about_p2">MATLAB ve Python kullanarak farklı projeler geliştirdim. Teknolojiye meraklı, öğrenmeye açık ve üretken bir mühendis olarak hem teknik hem de yaratıcı çözümler üretmeyi seviyorum.</p>
+                        <p data-lang="about_p2">Hedefim, disiplinlerarası bilgimi kullanarak yenilikçi çözümler üretmek ve endüstriyel otomasyon alanında projeler geliştirmektir.</p>
+                        <div class="skills">
+                            <h3 data-lang="skills_title">Yetenekler</h3>
+                            <div class="skill-category">
+                                <h4><i class="fas fa-cogs"></i> <span data-lang="skills_mechanical">Mekanik</span></h4>
+                                <ul>
+                                    <li>SolidWorks</li>
+                                    <li>ANSYS</li>
+                                    <li>Siemens NX</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4><i class="fas fa-microchip"></i> <span data-lang="skills_electronics">Elektronik</span></h4>
+                                <ul>
+                                    <li>Arduino</li>
+                                    <li>PLC Programlama</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4><i class="fas fa-code"></i> <span data-lang="skills_software">Yazılım</span></h4>
+                                <ul>
+                                    <li>Python</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projeler Bölümü -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title" data-lang="projects_title">Projeler</h2>
+                <div class="projects-grid">
+                    <!-- Proje 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/scara-robot.jpg" alt="SCARA Robot">
+                        </div>
+                        <div class="project-info">
+                            <h3>3 Eksenli SCARA Robot Tasarımı</h3>
+                            <p data-lang="project1_desc">SolidWorks ile tasarlanıp Arduino Mega ile kontrol edilen 3 eksenli SCARA robot. 500g yük kapasiteli.</p>
+                            <div class="project-tech">
+                                <span>Arduino</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn" target="_blank"><i class="fas fa-cube"></i> GrabCAD</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Proje 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/sera-otomasyon.jpg" alt="Sera Otomasyonu">
+                        </div>
+                        <div class="project-info">
+                            <h3>Akıllı Sera Otomasyonu</h3>
+                            <p data-lang="project2_desc">Nem, sıcaklık ve ışık sensörleriyle çalışan IoT tabanlı otomasyon sistemi.</p>
+                            <div class="project-tech">
+                                <span>Siemens S7-1200</span>
+                                <span>HMI</span>
+                                <span>IoT</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="btn" target="_blank"><i class="fas fa-cube"></i> GrabCAD</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Bölümü -->
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section-title" data-lang="blog_title">Blog</h2>
+                <div class="blog-posts" id="blog-posts">
+                    <!-- Medium API'den gelen yazılar buraya eklenecek -->
+                    <div class="loading" data-lang="blog_loading">Yazılar yükleniyor...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim Bölümü -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-lang="contact_title">İletişim</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="social-links">
+                            <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="#" target="_blank"><i class="fas fa-cube"></i> GrabCAD</a>
+                            <a href="#" target="_blank"><i class="fab fa-medium"></i> Medium</a>
+                            <a href="#" class="email-link"><i class="fas fa-envelope"></i> <span id="email">email@example.com</span> <button id="copy-email" data-lang="copy">Kopyala</button></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" data-lang="form_name">Adınız</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-lang="form_email">E-posta</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-lang="form_message">Mesajınız</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn" data-lang="form_submit">Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> <span data-lang="footer_rights">Tüm hakları saklıdır</span></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
