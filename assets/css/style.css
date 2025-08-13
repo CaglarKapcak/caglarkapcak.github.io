@@ -377,7 +377,7 @@ nav {
     gap: 10px;
     color: var(--dark-color);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     transition: color 0.3s;
 }
 
@@ -401,11 +401,12 @@ nav {
     background: var(--accent-color);
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 8px 15px; /* 5px 10px'ten büyütüldü */
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 1rem; /* 0.8rem'den büyütüldü */
     transition: background 0.3s;
+    margin-left: 10px; /* Bağlantıdan biraz uzaklaştırmak için */
 }
 
 #copy-email:hover {
