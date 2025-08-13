@@ -29,42 +29,97 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Email copy functionality
     const copyButton = document.getElementById('copy-email');
-    const email = document.getElementById('email').textContent;
-    
-    copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(email).then(() => {
-            const originalText = copyButton.textContent;
-            copyButton.textContent = 'Kopyalandı!';
-            setTimeout(() => {
-                copyButton.textContent = originalText;
-            }, 2000);
+    if (copyButton) {
+        const email = 'caglarkapcak@example.com'; // Gerçek email adresinizle değiştirin
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(email).then(() => {
+                const originalText = copyButton.textContent;
+                copyButton.textContent = 'Kopyalandı!';
+                setTimeout(() => {
+                    copyButton.textContent = originalText;
+                }, 2000);
+            });
         });
-    });
+    }
     
     // Contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Here you would normally send the form data to a server
-            // For GitHub Pages, you might need to use a third-party service like Formspree
-            
             alert('Mesajınız gönderildi! (Bu demo için gerçekte gönderilmez)');
             contactForm.reset();
         });
     }
     
+    // Initialize projects scroller
+    initProjectsScroller();
+    
     // Load blog posts from Medium API
     loadBlogPosts();
 });
 
+// Projects horizontal scroller functionality
+function initProjectsScroller() {
+    const scroller = document.querySelector('.projects-scroller');
+    if (!scroller) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    scroller.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - scroller.offsetLeft;
+        scrollLeft = scroller.scrollLeft;
+        scroller.style.cursor = 'grabbing';
+    });
+
+    scroller.addEventListener('mouseleave', () => {
+        isDown = false;
+        scroller.style.cursor = 'grab';
+    });
+
+    scroller.addEventListener('mouseup', () => {
+        isDown = false;
+        scroller.style.cursor = 'grab';
+    });
+
+    scroller.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - scroller.offsetLeft;
+        const walk = (x - startX) * 2;
+        scroller.scrollLeft = scrollLeft - walk;
+    });
+
+    // Touch support for mobile devices
+    scroller.addEventListener('touchstart', (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX - scroller.offsetLeft;
+        scrollLeft = scroller.scrollLeft;
+    });
+
+    scroller.addEventListener('touchend', () => {
+        isDown = false;
+    });
+
+    scroller.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - scroller.offsetLeft;
+        const walk = (x - startX) * 2;
+        scroller.scrollLeft = scrollLeft - walk;
+    });
+}
+
 async function loadBlogPosts() {
     const blogContainer = document.getElementById('blog-posts');
+    if (!blogContainer) return;
     
     try {
         // Medium RSS feed URL (replace with your actual Medium username)
-        const mediumUsername = 'yourmediumusername';
+        const mediumUsername = 'caglarkapcak'; // Medium kullanıcı adınızla değiştirin
         const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`;
         
         const response = await fetch(rssUrl);
