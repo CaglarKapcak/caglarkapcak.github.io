@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Email copy functionality
     const copyButton = document.getElementById('copy-email');
     if (copyButton) {
-        const email = 'caglarkapcak@example.com'; // Gerçek email adresinizle değiştirin
+        const email = 'caglarkapcak@gmail.com'; // Email adresinizle değiştirin
         copyButton.addEventListener('click', () => {
             navigator.clipboard.writeText(email).then(() => {
                 const originalText = copyButton.textContent;
@@ -42,21 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Contact form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mesajınız gönderildi! (Bu demo için gerçekte gönderilmez)');
-            contactForm.reset();
-        });
-    }
-    
     // Initialize projects scroller
     initProjectsScroller();
     
-    // Load blog posts from Medium API
-    loadBlogPosts();
+    // Load Medium blog posts
+    loadMediumPosts();
 });
 
 // Projects horizontal scroller functionality
@@ -113,40 +103,51 @@ function initProjectsScroller() {
     });
 }
 
-async function loadBlogPosts() {
-    const blogContainer = document.getElementById('blog-posts');
-    if (!blogContainer) return;
+// Medium RSS Çekme Fonksiyonu
+function loadMediumPosts() {
+    const mediumUsername = 'caglarkapcak433';
+    const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
+    const corsProxy = 'https://api.allorigins.win/get?url=';
     
-    try {
-        // Medium RSS feed URL (replace with your actual Medium username)
-        const mediumUsername = 'caglarkapcak'; // Medium kullanıcı adınızla değiştirin
-        const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${mediumUsername}`;
-        
-        const response = await fetch(rssUrl);
-        const data = await response.json();
-        
-        if (data.status === 'ok' && data.items) {
-            blogContainer.innerHTML = '';
+    fetch(`${corsProxy}${encodeURIComponent(rssUrl)}`)
+        .then(response => {
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json();
+        })
+        .then(data => {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(data.contents, "text/xml");
+            const items = xmlDoc.querySelectorAll('item');
+            const recentPostsContainer = document.getElementById('recent-posts');
             
-            // Display first 4 posts
-            data.items.slice(0, 4).forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.className = 'blog-post';
-                postElement.innerHTML = `
-                    <img src="${post.thumbnail || 'assets/images/blog-default.jpg'}" alt="${post.title}">
-                    <div class="blog-post-content">
-                        <h3>${post.title}</h3>
-                        <p>${post.description.substring(0, 150)}...</p>
-                        <a href="${post.link}" target="_blank">Devamını oku</a>
+            if (!recentPostsContainer) return;
+            
+            let postsHTML = '';
+            
+            // Son 5 yazıyı al
+            Array.from(items).slice(0, 5).forEach(item => {
+                const title = item.querySelector('title').textContent;
+                const link = item.querySelector('link').textContent;
+                
+                postsHTML += `
+                    <a href="${link}" class="post-button" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-medium"></i> ${title}
+                    </a>
+                `;
+            });
+            
+            recentPostsContainer.innerHTML = postsHTML;
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            const recentPostsContainer = document.getElementById('recent-posts');
+            if (recentPostsContainer) {
+                recentPostsContainer.innerHTML = `
+                    <div class="error-message">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Yazılar yüklenirken hata oluştu. <a href="https://medium.com/@${mediumUsername}" target="_blank">Medium sayfamı ziyaret edin</a></span>
                     </div>
                 `;
-                blogContainer.appendChild(postElement);
-            });
-        } else {
-            blogContainer.innerHTML = '<div class="error" data-lang="blog_error">Yazılar yüklenirken bir hata oluştu.</div>';
-        }
-    } catch (error) {
-        console.error('Error loading blog posts:', error);
-        blogContainer.innerHTML = '<div class="error" data-lang="blog_error">Yazılar yüklenirken bir hata oluştu.</div>';
-    }
+            }
+        });
 }
