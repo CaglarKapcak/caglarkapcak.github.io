@@ -1,4 +1,4 @@
-// Language support
+ // Language support
 document.addEventListener('DOMContentLoaded', function() {
     const languageToggle = document.getElementById('language-toggle');
     let currentLanguage = 'tr'; // Default language
