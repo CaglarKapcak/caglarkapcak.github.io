@@ -124,8 +124,8 @@ function loadMediumPosts() {
             
             let postsHTML = '';
             
-            // Son 5 yazıyı al
-            Array.from(items).slice(0, 5).forEach(item => {
+            // Son 4 yazıyı al
+            Array.from(items).slice(0, 4).forEach(item => {
                 const title = item.querySelector('title').textContent;
                 const link = item.querySelector('link').textContent;
                 
