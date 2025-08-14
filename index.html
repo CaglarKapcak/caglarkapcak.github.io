@@ -208,16 +208,46 @@
     </div>
 </section>
         <!-- Blog Bölümü -->
-        <section id="blog" class="section">
-            <div class="container">
-                <h2 class="section-title" data-lang="blog_title">Blog</h2>
-                <div class="blog-posts" id="blog-posts">
-                    <!-- Medium API'den gelen yazılar buraya eklenecek -->
-                    <div class="loading" data-lang="blog_loading">Yazılar yükleniyor...</div>
+<!-- Blog Bölümü -->
+<section id="blog" class="section">
+    <div class="container">
+        <h2 class="section-title" data-lang="blog_title">Blog</h2>
+        <div class="blog-grid">
+            <!-- Son Yazılar -->
+            <div class="blog-column">
+                <h3><i class="fas fa-clock"></i> <span data-lang="recent_posts">Son Yazılar</span></h3>
+                <div class="post-list" id="recent-posts">
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span data-lang="loading">Yükleniyor...</span>
+                    </div>
                 </div>
             </div>
-        </section>
-<!-- Notlar Bölümü -->
+            
+            <!-- Öne Çıkanlar -->
+            <div class="blog-column">
+                <h3><i class="fas fa-star"></i> <span data-lang="featured_posts">Öne Çıkanlar</span></h3>
+                <div class="post-list">
+                    <a href="MEDIUM_LINK_1" class="post-button" target="_blank">
+                        <i class="fab fa-medium"></i> Python ile Makine Öğrenmesi
+                    </a>
+                    <a href="MEDIUM_LINK_2" class="post-button" target="_blank">
+                        <i class="fab fa-medium"></i> SolidWorks Tasarım İpuçları
+                    </a>
+                    <a href="MEDIUM_LINK_3" class="post-button" target="_blank">
+                        <i class="fab fa-medium"></i> Arduino Projeleri
+                    </a>
+                    <a href="MEDIUM_LINK_4" class="post-button" target="_blank">
+                        <i class="fab fa-medium"></i> Endüstri 4.0 ve IoT
+                    </a>
+                    <a href="MEDIUM_LINK_5" class="post-button" target="_blank">
+                        <i class="fab fa-medium"></i> MATLAB ile Veri Analizi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Notlar Bölümü -->
 <section id="notes" class="section">
     <div class="container">
