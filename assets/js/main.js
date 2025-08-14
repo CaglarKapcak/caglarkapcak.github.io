@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Email copy functionality
     const copyButton = document.getElementById('copy-email');
     if (copyButton) {
-        const email = 'caglarkapcak@gmail.com'; // Email adresinizle değiştirin
+        const email = 'caglarkapcak@gmail.com';
         copyButton.addEventListener('click', () => {
             navigator.clipboard.writeText(email).then(() => {
                 const originalText = copyButton.textContent;
@@ -103,31 +103,28 @@ function initProjectsScroller() {
     });
 }
 
-// Medium RSS Çekme Fonksiyonu
-function loadMediumPosts() {
+// Medium RSS Çekme Fonksiyonu (Güncellenmiş)
+async function loadMediumPosts() {
     const mediumUsername = 'caglarkapcak433';
-    const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
-    const corsProxy = 'https://api.allorigins.win/get?url=';
+    const recentPostsContainer = document.getElementById('recent-posts');
     
-    fetch(`${corsProxy}${encodeURIComponent(rssUrl)}`)
-        .then(response => {
-            if (!response.ok) throw new Error('Network response was not ok');
-            return response.json();
-        })
-        .then(data => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(data.contents, "text/xml");
-            const items = xmlDoc.querySelectorAll('item');
-            const recentPostsContainer = document.getElementById('recent-posts');
-            
-            if (!recentPostsContainer) return;
-            
+    if (!recentPostsContainer) return;
+
+    try {
+        // 1. Yöntem: RSS Proxy
+        const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
+        const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
+        
+        const response = await fetch(proxyUrl + encodeURIComponent(rssUrl));
+        const data = await response.json();
+        
+        if (data.status === 'ok' && data.items) {
             let postsHTML = '';
             
             // Son 4 yazıyı al
-            Array.from(items).slice(0, 4).forEach(item => {
-                const title = item.querySelector('title').textContent;
-                const link = item.querySelector('link').textContent;
+            data.items.slice(0, 4).forEach(item => {
+                const title = item.title;
+                const link = item.link;
                 
                 postsHTML += `
                     <a href="${link}" class="post-button" target="_blank" rel="noopener noreferrer">
@@ -136,18 +133,17 @@ function loadMediumPosts() {
                 `;
             });
             
-            recentPostsContainer.innerHTML = postsHTML;
-        })
-        .catch(error => {
-            console.error('Fetch error:', error);
-            const recentPostsContainer = document.getElementById('recent-posts');
-            if (recentPostsContainer) {
-                recentPostsContainer.innerHTML = `
-                    <div class="error-message">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <span>Yazılar yüklenirken hata oluştu. <a href="https://medium.com/@${mediumUsername}" target="_blank">Medium sayfamı ziyaret edin</a></span>
-                    </div>
-                `;
-            }
-        });
+            recentPostsContainer.innerHTML = postsHTML || '<div class="no-posts">Henüz yazı bulunamadı</div>';
+        } else {
+            throw new Error('Geçersiz veri formatı');
+        }
+    } catch (error) {
+        console.error('Medium yazıları yüklenirken hata:', error);
+        recentPostsContainer.innerHTML = `
+            <div class="error-message">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Yazılar yüklenirken hata oluştu. <a href="https://medium.com/@${mediumUsername}" target="_blank">Medium sayfamı ziyaret edin</a></span>
+            </div>
+        `;
+    }
 }
