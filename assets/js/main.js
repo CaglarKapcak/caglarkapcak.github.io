@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
+    // Footer'a güncel yılı yaz
     document.getElementById('year').textContent = new Date().getFullYear();
     
-    // Mobile menu toggle
+    // Mobil menü toggle
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         burger.classList.toggle('toggle');
     });
     
-    // Smooth scrolling for navigation
+    // Yumuşak kaydırma (smooth scrolling)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -27,29 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Email copy functionality
-    const copyButton = document.getElementById('copy-email');
-    if (copyButton) {
-        const email = 'cag952kap@gmail.com';
-        copyButton.addEventListener('click', () => {
-            navigator.clipboard.writeText(email).then(() => {
-                const originalText = copyButton.textContent;
-                copyButton.textContent = 'Kopyalandı!';
-                setTimeout(() => {
-                    copyButton.textContent = originalText;
-                }, 2000);
-            });
-        });
-    }
-    
-    // Initialize projects scroller
+    // Proje kaydırıcıyı başlat
     initProjectsScroller();
     
-    // Load Medium blog posts
+    // Medium yazılarını yükle
     loadMediumPosts();
+    
+    // İletişim kopyalama butonlarını başlat
+    initContactCopyButtons();
 });
 
-// Projects horizontal scroller functionality
+// Proje kartlarını yatay kaydırma fonksiyonu
 function initProjectsScroller() {
     const scroller = document.querySelector('.projects-scroller');
     if (!scroller) return;
@@ -83,7 +71,7 @@ function initProjectsScroller() {
         scroller.scrollLeft = scrollLeft - walk;
     });
 
-    // Touch support for mobile devices
+    // Mobil dokunmatik destek
     scroller.addEventListener('touchstart', (e) => {
         isDown = true;
         startX = e.touches[0].pageX - scroller.offsetLeft;
@@ -103,7 +91,7 @@ function initProjectsScroller() {
     });
 }
 
-// Medium RSS Çekme Fonksiyonu (Güncellenmiş)
+// Medium yazılarını yükleme fonksiyonu
 async function loadMediumPosts() {
     const mediumUsername = 'caglarkapcak433';
     const recentPostsContainer = document.getElementById('recent-posts');
@@ -111,7 +99,6 @@ async function loadMediumPosts() {
     if (!recentPostsContainer) return;
 
     try {
-        // 1. Yöntem: RSS Proxy
         const proxyUrl = 'https://api.rss2json.com/v1/api.json?rss_url=';
         const rssUrl = `https://medium.com/feed/@${mediumUsername}`;
         
@@ -146,4 +133,43 @@ async function loadMediumPosts() {
             </div>
         `;
     }
+}
+
+// İletişim kopyalama butonları fonksiyonu
+function initContactCopyButtons() {
+    document.querySelectorAll('.copy-btn').forEach(button => {
+        button.addEventListener('click', async function() {
+            const contactCard = this.closest('.contact-card');
+            if (!contactCard) return;
+            
+            const contactLink = contactCard.querySelector('.contact-link');
+            if (!contactLink) return;
+            
+            const textToCopy = contactLink.href || contactLink.textContent.trim();
+            const originalContent = this.innerHTML;
+            
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                
+                // Başarılı geri bildirim
+                this.innerHTML = '<i class="fas fa-check"></i> Kopyalandı!';
+                this.classList.add('success');
+                
+                // 2 saniye sonra orijinal hale dön
+                setTimeout(() => {
+                    this.innerHTML = originalContent;
+                    this.classList.remove('success');
+                }, 2000);
+            } catch (err) {
+                console.error('Kopyalama hatası:', err);
+                this.innerHTML = '<i class="fas fa-times"></i> Hata!';
+                this.classList.add('error');
+                
+                setTimeout(() => {
+                    this.innerHTML = originalContent;
+                    this.classList.remove('error');
+                }, 2000);
+            }
+        });
+    });
 }
