@@ -360,41 +360,72 @@
         </div>
     </div>
 </section>
-      <!-- İletişim Bölümü -->
+<!-- İletişim Bölümü -->
 <section id="contact" class="section">
     <div class="container">
         <h2 class="section-title" data-lang="contact_title">İletişim</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="social-links">
-                    <!-- LinkedIn -->
-                    <div class="link-item">
-                        <a href="https://linkedin.com/in/çağlarkapcak" target="_blank">
-                            <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
-                        </a>
-                    </div>
-                    
-                    <!-- GrabCAD -->
-                    <div class="link-item">
-                        <a href="https://grabcad.com/caglar.kapcak-1" target="_blank">
-                            <i class="fas fa-cube"></i> <span>Grabcad</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Medium -->
-                    <div class="link-item">
-                        <a href="https://medium.com/@caglarkapcak" target="_blank">
-                            <i class="fab fa-medium"></i> <span>Medium</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Email -->
-                    <div class="link-item">
-                        <a href="mailto:caglarkapcak@gmail.com">
-                            <i class="fas fa-envelope"></i> <span>E-Mail</span>
-                        </a>
-                        <button id="copy-email" class="copy-btn" data-lang="copy">Kopyala</button>
-                    </div>
+        <div class="contact-grid">
+            <!-- LinkedIn -->
+            <div class="contact-card">
+                <div class="contact-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/caglarkapcak" target="_blank" class="contact-link">
+                        linkedin.com/in/caglarkapcak
+                    </a>
+                    <button class="copy-btn" onclick="copyToClipboard('https://linkedin.com/in/caglarkapcak')">
+                        <i class="far fa-copy"></i> Kopyala
+                    </button>
+                </div>
+            </div>
+
+            <!-- GrabCAD -->
+            <div class="contact-card">
+                <div class="contact-icon grabcad">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>GrabCAD</h3>
+                    <a href="https://grabcad.com/caglar.kapcak-1" target="_blank" class="contact-link">
+                        grabcad.com/caglar.kapcak-1
+                    </a>
+                    <button class="copy-btn" onclick="copyToClipboard('https://grabcad.com/caglar.kapcak-1')">
+                        <i class="far fa-copy"></i> Kopyala
+                    </button>
+                </div>
+            </div>
+
+            <!-- Medium -->
+            <div class="contact-card">
+                <div class="contact-icon medium">
+                    <i class="fab fa-medium-m"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>Medium</h3>
+                    <a href="https://medium.com/@caglarkapcak433" target="_blank" class="contact-link">
+                        medium.com/@caglarkapcak433
+                    </a>
+                    <button class="copy-btn" onclick="copyToClipboard('https://medium.com/@caglarkapcak433')">
+                        <i class="far fa-copy"></i> Kopyala
+                    </button>
+                </div>
+            </div>
+
+            <!-- E-Mail -->
+            <div class="contact-card">
+                <div class="contact-icon email">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-info">
+                    <h3>E-Mail</h3>
+                    <a href="mailto:caglarkapcak@gmail.com" class="contact-link">
+                        caglarkapcak@gmail.com
+                    </a>
+                    <button class="copy-btn" onclick="copyToClipboard('caglarkapcak@gmail.com')">
+                        <i class="far fa-copy"></i> Kopyala
+                    </button>
                 </div>
             </div>
         </div>
