@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Email copy functionality
     const copyButton = document.getElementById('copy-email');
     if (copyButton) {
-        const email = 'caglarkapcak@gmail.com';
+        const email = 'cag952kap@gmail.com';
         copyButton.addEventListener('click', () => {
             navigator.clipboard.writeText(email).then(() => {
                 const originalText = copyButton.textContent;
