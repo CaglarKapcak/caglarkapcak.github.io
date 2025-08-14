@@ -647,3 +647,62 @@ footer {
 .note-links .btn:last-child {
     background: #00ab6c;
 }
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.blog-column h3 {
+    color: #00ab6c;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.post-button {
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-button:hover {
+    background: #f5f5f5;
+    transform: translateX(5px);
+    border-color: #00ab6c;
+}
+
+.post-button i {
+    color: #00ab6c;
+}
+
+.loading-spinner {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
