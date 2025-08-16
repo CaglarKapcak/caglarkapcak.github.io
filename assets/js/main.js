@@ -93,7 +93,7 @@ function initProjectsScroller() {
 
 // Medium yazılarını yükleme fonksiyonu
 async function loadMediumPosts() {
-    const mediumUsername = 'caglarkapcak433';
+    const mediumUsername = 'caglarkapcak';
     const recentPostsContainer = document.getElementById('recent-posts');
     
     if (!recentPostsContainer) return;
