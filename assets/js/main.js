@@ -108,8 +108,8 @@ async function loadMediumPosts() {
         if (data.status === 'ok' && data.items) {
             let postsHTML = '';
             
-            // Son 4 yazıyı al
-            data.items.slice(0, 4).forEach(item => {
+            // Son 5 yazıyı al
+            data.items.slice(0, 5).forEach(item => {
                 const title = item.title;
                 const link = item.link;
                 
