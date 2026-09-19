@@ -144,8 +144,8 @@ button{font:inherit}
 
 h1{
   margin:0 0 12px;
-  font-size:clamp(48px,9.5vw,104px);line-height:.86;
-  font-stretch:120%;font-weight:700;letter-spacing:-.042em;
+  font-size:clamp(48px,9.5vw,105px);line-height:.86;
+  font-stretch:100%;font-weight:700;letter-spacing:-.042em;
 }
 .hero-rol{margin:0;font-size:clamp(17px,2.4vw,23px);color:var(--pirinc);font-stretch:104%}
 .hero-lede{margin:20px 0 0;max-width:46ch;color:var(--soluk)}
