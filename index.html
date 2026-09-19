@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ad Soyad — Mekatronik Mühendisi</title>
+<meta name="description" content="Mekatronik mühendisi. Projeler, yazılar, ders notları ve iletişim.">
+<meta name="theme-color" content="#0b0f12">
+<meta property="og:title" content="Ad Soyad — Mekatronik Mühendisi">
+<meta property="og:description" content="Mekanik tasarım, gömülü sistemler ve hareket kontrolü üzerine projeler ve yazılar.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="atla" href="#icerik">İçeriğe atla</a>
+
+<header class="ust">
+  <div class="ust-ic">
+    <a class="logo" href="#tepe">
+      <span class="logo-ad" data-site="ad">Ad Soyad</span>
+      <span class="logo-alt" data-site="unvanKisa">mekatronik</span>
+    </a>
+
+    <nav class="menu" id="menu" aria-label="Ana menü">
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#projeler">Projeler</a>
+      <a href="#blog">Blog</a>
+      <a href="#arsiv">Çalışma arşivi</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <button class="menu-dugme" id="menuDugme" type="button"
+            aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="icerik">
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="tepe">
+    <div class="hero-gorsel">
+      <img id="heroFoto" src="assets/img/hero.jpg" alt="" loading="eager" decoding="async">
+      <div class="hero-perde" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-ic">
+      <p class="hero-ust"><span data-site="konum">Kayseri, Türkiye</span></p>
+      <h1 data-site="adSatirli">Ad<br>Soyad</h1>
+      <p class="hero-rol" data-site="unvan">Mekatronik mühendisi</p>
+      <p class="hero-lede" data-site="ozet"></p>
+
+      <div class="hero-butonlar">
+        <a class="dugme dugme-dolu" href="#projeler">Projelere bak</a>
+        <a class="dugme" href="#iletisim">İletişime geç</a>
+      </div>
+
+      <dl class="sayac" id="sayac"></dl>
+    </div>
+  </section>
+
+  <!-- ==================== HAKKIMDA ==================== -->
+  <section class="bolum" id="hakkimda">
+    <div class="bolum-baslik">
+      <h2>Hakkımda</h2>
+      <span class="kod">01</span>
+    </div>
+    <div class="hakkimda-duzen">
+      <div class="hakkimda-yazi" id="hakkimdaYazi"></div>
+      <div class="yetenekler" id="yetenekler"></div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJELER ==================== -->
+  <section class="bolum" id="projeler">
+    <div class="bolum-baslik">
+      <h2>Projeler</h2>
+      <span class="kod"><span id="projeSayi">0</span> kayıt</span>
+    </div>
+
+    <div class="filtreler" id="projeFiltre" role="group" aria-label="Proje filtreleri"></div>
+    <div class="kart-izgara" id="projeListe"></div>
+    <button class="daha dugme" id="projeDaha" type="button" hidden>Daha fazla proje</button>
+  </section>
+
+  <!-- ==================== BLOG ==================== -->
+  <section class="bolum" id="blog">
+    <div class="bolum-baslik">
+      <h2>Blog</h2>
+      <span class="kod" id="blogKaynak">hashnode</span>
+    </div>
+
+    <div class="blog-grup">
+      <h3 class="alt-baslik">Tavsiye ettiklerim</h3>
+      <p class="alt-not">Geri dönüp en çok baktığım, üstünde en çok uğraştığım yazılar.</p>
+      <div class="one-cikan" id="oneCikan">
+        <div class="durum">Yükleniyor…</div>
+      </div>
+    </div>
+
+    <div class="blog-grup">
+      <h3 class="alt-baslik">Son yazılar</h3>
+      <div class="yazilar" id="sonYazilar">
+        <div class="durum">Yükleniyor…</div>
+      </div>
+      <p class="yazilar-alt" id="blogAlt"></p>
+    </div>
+  </section>
+
+  <!-- ==================== ÇALIŞMA ARŞİVİ ==================== -->
+  <section class="bolum" id="arsiv">
+    <div class="bolum-baslik">
+      <h2>Çalışma arşivi</h2>
+      <span class="kod"><span id="arsivSayi">0</span> kayıt</span>
+    </div>
+    <p class="bolum-giris">Farklı konularda öğrenirken tuttuğum notlar ve pratik yaptığım depolar. Hepsi açık.</p>
+
+    <div class="filtreler" id="arsivFiltre" role="group" aria-label="Arşiv filtreleri"></div>
+    <div class="kart-izgara" id="arsivListe"></div>
+    <p class="durum" id="arsivBos" hidden>Bu başlıkta henüz kayıt yok.</p>
+  </section>
+
+  <!-- ==================== İLETİŞİM ==================== -->
+  <section class="bolum" id="iletisim">
+    <div class="bolum-baslik">
+      <h2>İletişim</h2>
+      <span class="kod">05</span>
+    </div>
+    <p class="bolum-giris">Bir fikriniz ya da birlikte yapabileceğimiz bir iş varsa en hızlı e-postadan dönerim.</p>
+    <div class="iletisim-izgara" id="iletisimListe"></div>
+  </section>
+</main>
+
+<footer class="alt">
+  <span data-site="altYazi">Ad Soyad — mekatronik mühendisi</span>
+  <span class="kod" id="altRev"></span>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/blog.js"></script>
+</body>
+</html>
