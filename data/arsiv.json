@@ -1,0 +1,34 @@
+[
+  {
+    "kategori": "MATLAB",
+    "baslik": "MATLAB Ders Notları",
+    "aciklama": "Temel Matlab kullanımı, veri analizi ve simülasyon notlarım.",
+    "tur": "github",
+    "turEtiket": "GitHub",
+    "link": "https://github.com/CaglarKapcak/matlab-lecture-notes"
+  },
+  {
+    "kategori": "SolidWorks",
+    "baslik": "SolidWorks Egzersizleri",
+    "aciklama": "3D modelleme, tasarım ve montaj egzersizlerim.",
+    "tur": "grabcad",
+    "turEtiket": "GrabCAD",
+    "link": "https://grabcad.com/library/solidworks-exercise-5"
+  },
+  {
+    "kategori": "Algoritma",
+    "baslik": "LeetCode Çözümleri",
+    "aciklama": "LeetCode üzerindeki algoritma ve veri yapısı sorularına kendi çözüm yollarımı paylaştığım bir repo. Kodlar, farklı problem tiplerine yönelik pratik ve anlaşılır çözümler içeriyor.",
+    "tur": "github",
+    "turEtiket": "GitHub",
+    "link": "https://github.com/CaglarKapcak/leetcodeseries"
+  },
+  {
+    "kategori": "Python",
+    "baslik": "Python Örnekleri",
+    "aciklama": "Python'un temel konularını öğrenmek için yazdığım örnek kodların yer aldığı bir repo. Basit ve anlaşılır örneklerle temel programlama mantığını gösteriyor.",
+    "tur": "github",
+    "turEtiket": "GitHub",
+    "link": "https://github.com/CaglarKapcak/Pyhton-ornekler"
+  }
+]

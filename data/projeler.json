@@ -1,0 +1,99 @@
+[
+  {
+    "kod": "P-08",
+    "yil": "2026",
+    "kategori": "Robotik",
+    "baslik": "Akıllı Boyut Algılama Robot Kol",
+    "aciklama": "Robot kol, görüntü işleme ve makine öğrenmesi ile kutuların boyutunu otomatik algılar. Üretim ve paketlemede hızlı ve doğru sınıflandırma sağlar.",
+    "etiketler": ["Görüntü İşleme", "Makine Öğrenmesi", "Robot Kol"],
+    "gorsel": "assets/img/proje-08.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/MTU2-ve-Bitirme-Projesi" }
+    ]
+  },
+  {
+    "kod": "P-07",
+    "yil": "2025",
+    "kategori": "Otomasyon",
+    "baslik": "PLC Tabanlı Çift Robot Kol Paketleme Sistemi",
+    "aciklama": "PLC tabanlı, kızılötesi sensör destekli çift robot kol paketleme sistemi tasarlayıp Factory I/O'da simüle ettim.",
+    "etiketler": ["PLC", "Kızılötesi Sensör", "Factory I/O"],
+    "gorsel": "assets/img/proje-07.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/Mtu1-Projesi" },
+      { "tur": "grabcad", "url": "https://grabcad.com/caglar.kapcak-1" }
+    ]
+  },
+  {
+    "kod": "P-06",
+    "yil": "2025",
+    "kategori": "IoT",
+    "baslik": "HavaVigil — Boyahane Havalandırma ve Emisyon İzleme Sistemi",
+    "aciklama": "Endüstriyel boyahanelerde VOC ve CO seviyelerini gerçek zamanlı izleyerek havalandırma verimliliğini optimize eden ve operatörleri anormal durumlara karşı uyaran IoT tabanlı akıllı izleme çözümü. ESP32 ve profesyonel gaz sensörleriyle hem yerel hem bulut tabanlı veri takibi sunuyor.",
+    "etiketler": ["ESP32", "IoT", "Gaz Sensörü"],
+    "gorsel": "assets/img/proje-06.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/boyahane_havalandirma_verimliligi" }
+    ]
+  },
+  {
+    "kod": "P-05",
+    "yil": "2025",
+    "kategori": "IoT",
+    "baslik": "Makine Sağlığı İzleme ve Arıza Öngörü Sistemi",
+    "aciklama": "Makine arızalarını önceden tahmin eden akıllı IoT sistemi. Raspberry Pi ve yapay zeka ile titreşim analizi yapar, anormallikte anında uyarı gönderir. Endüstriyel bakım maliyetlerini düşürür.",
+    "etiketler": ["Raspberry Pi", "Titreşim Analizi", "Arıza Öngörüsü"],
+    "gorsel": "assets/img/proje-05.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/boyahane_havalandirma_verimliligi" }
+    ]
+  },
+  {
+    "kod": "P-04",
+    "yil": "2024",
+    "kategori": "IoT",
+    "baslik": "Akıllı Forklift Performans İzleme Sistemi",
+    "aciklama": "Fabrika ve depo ortamlarında forkliftlerin gerçek zamanlı performansını, operatör verimliliğini ve güvenlik parametrelerini izleyen IoT tabanlı bir sistem. Sensör verileriyle anlık analiz yaparak kaza riskini azaltır ve operasyonel verimliliği artırır.",
+    "etiketler": ["IoT", "Performans İzleme", "Güvenlik"],
+    "gorsel": "assets/img/proje-04.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/forklit_performans_takip" }
+    ]
+  },
+  {
+    "kod": "P-03",
+    "yil": "2024",
+    "kategori": "IoT",
+    "baslik": "Akıllı Sera Otomasyonu",
+    "aciklama": "Nem, sıcaklık ve ışık sensörleriyle çalışan IoT tabanlı otomasyon sistemi.",
+    "etiketler": ["IoT", "Sensör", "Otomasyon"],
+    "gorsel": "assets/img/proje-03.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/akillisera" }
+    ]
+  },
+  {
+    "kod": "P-02",
+    "yil": "2024",
+    "kategori": "Robotik",
+    "baslik": "Otonom Devriye Aracı",
+    "aciklama": "Çoklu sensör entegrasyonlu akıllı robot kontrol sistemi. Engelden kaçma, çizgi takibi, sıcaklık ve gaz seviyesi ölçümü yapabilen otonom robot.",
+    "etiketler": ["Otonom Robot", "Sensör Füzyonu", "Çizgi Takibi"],
+    "gorsel": "assets/img/proje-02.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/Otonom-robot" }
+    ]
+  },
+  {
+    "kod": "P-01",
+    "yil": "2023",
+    "kategori": "Yazılım",
+    "baslik": "OkurTakip",
+    "aciklama": "Kitap ve makalelerinizi düzenli şekilde kaydedip okuma ilerlemenizi takip eden masaüstü bir uygulama. İstatistikler, grafikler ve kişiselleştirilebilir arayüz ile okuma alışkanlıklarınızı analiz etmenizi sağlar.",
+    "etiketler": ["Masaüstü Uygulama", "Python", "Veri Görselleştirme"],
+    "gorsel": "assets/img/proje-01.jpg",
+    "baglantilar": [
+      { "tur": "github", "url": "https://github.com/CaglarKapcak/OkurTakip" }
+    ]
+  }
+]

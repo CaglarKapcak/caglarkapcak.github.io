@@ -1,0 +1,40 @@
+{
+  "ad": "Çağlar Kapcak",
+  "unvan": "Mekatronik Mühendisi",
+  "unvanKisa": "mekatronik",
+  "konum": "Türkiye",
+  "deneyim": "1+ yıl deneyim",
+  "ozet": "Mekatronik mühendisliği alanında 1 yıllık deneyime sahibim. SolidWorks, Siemens NX ve ANSYS ile tasarım ve analiz yapıyor; MATLAB ve Python ile projeler geliştiriyorum.",
+
+  "hakkimda": [
+    "Mekatronik mühendisliği alanında 1 yıllık deneyime sahibim. SolidWorks, Siemens NX ve ANSYS ile tasarım ve analiz çalışmaları yapıyorum. MATLAB ve Python kullanarak farklı projeler geliştirdim.",
+    "Teknolojiye meraklı, öğrenmeye açık ve üretken bir mühendis olarak hem teknik hem de yaratıcı çözümler üretmeyi seviyorum.",
+    "Hedefim, disiplinlerarası bilgimi kullanarak yenilikçi çözümler üretmek ve endüstriyel otomasyon alanında projeler geliştirmektir."
+  ],
+
+  "yetenekler": [
+    { "grup": "Mekanik",   "beceriler": ["SolidWorks", "Siemens NX", "ANSYS", "AutoCAD"] },
+    { "grup": "Elektronik","beceriler": ["Arduino", "PLC Programlama", "ESP32", "Raspberry Pi"] },
+    { "grup": "Yazılım",   "beceriler": ["Python", "MATLAB"] }
+  ],
+
+  "blog": {
+    "kaynak": "medium",
+    "kullaniciAdi": "kapcag218",
+    "sonYaziSayisi": 5,
+
+    "oneCikanUrls": [
+      "https://medium.com/@kapcag218/quality-as-a-system-design-what-does-a-process-quality-engineer-do-d4c665569631",
+      "https://medium.com/@kapcag218/the-modern-ark%C4%B1l-why-im-documenting-my-engineering-journey-b3d86fa032d3"
+    ]
+  },
+
+  "iletisim": {
+    "mail": "cag952kap@gmail.com",
+    "linkedin": "https://linkedin.com/in/caglarkapcak",
+    "grabcad": "https://grabcad.com/caglar.kapcak-1",
+    "medium": "https://medium.com/@kapcag218"
+  },
+
+  "gosterilenProje": 4
+}
